@@ -4,8 +4,8 @@ import { Link, Switch, useRouteMatch } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import AdminRoute from '../../Login/AdminRoute/AdminRoute';
 import DashboardHome from '../DashboardHome/DashboardHome';
-import EditEmployee from '../ManageEmployee/EditEmployee';
 import ManageEmployee from '../ManageEmployee/ManageEmployee';
+import ManageManager from '../ManageManager/ManageManager';
 import MyProfile from '../MyProfile/MyProfile';
 
 
@@ -27,6 +27,7 @@ const DashboardMenu = () => {
                              <Link to={`${url}/dashboardHome`} className="dashboard-nav-item"><i><FaUser/></i> Dashboard </Link>
                              <Link to={`${url}/profiles`} className="dashboard-nav-item"><i><FaUser/></i> Profile </Link>
                              <Link to={`${url}/employee`} className="dashboard-nav-item"><i><FaUserEdit/></i>Employee </Link>
+                             <Link to={`${url}/managers`} className="dashboard-nav-item"><i><FaUserEdit/></i>Manager </Link>
 
                               <div className="nav-item-divider"></div>
                               <Link to={`${url}`} className="dashboard-nav-item">
@@ -53,8 +54,8 @@ const DashboardMenu = () => {
                             <AdminRoute path={`${path}/employee`}>
                             <ManageEmployee></ManageEmployee>
                             </AdminRoute>
-                            <AdminRoute path={`${path}/edit/:Eid`}>
-                            <EditEmployee></EditEmployee>
+                            <AdminRoute path={`${path}/managers`}>
+                                <ManageManager></ManageManager>
                             </AdminRoute>
 
                             {/* Admin Route  */}
