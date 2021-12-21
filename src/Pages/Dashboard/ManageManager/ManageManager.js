@@ -37,7 +37,7 @@ return (
                   <thead>
                      <tr>
                         <th><span>User</span></th>
-                        <th><span>Created</span></th>
+                        <th><span>Address</span></th>
                         <th className="text-center"><span>Status</span></th>
                         <th><span>Email</span></th>
                         <th>&nbsp;</th>
@@ -54,13 +54,13 @@ return (
                            <span className="user-subhead">Manager</span>
                         </td>
                         <td>
-                           2013/08/08
+                           {manager.MAddress}
                         </td>
                         <td className="text-center">
-                           <span className="label label-default">Inactive</span>
+                           <span className="label label-default">{manager.MStatus}</span>
                         </td>
                         <td>
-                           <a href="#">{manager.MName}</a>
+                           <a href="#">{manager.MEmail}</a>
                         </td>
                         <td style={{ width: '20%' }}>
                         <div className="table-link d-flex">

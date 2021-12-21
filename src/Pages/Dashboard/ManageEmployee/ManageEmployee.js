@@ -306,19 +306,29 @@ return (
                                                    {errors.EPhone && 
                                                    <p className="text-danger">This field is required</p>
                                                    }
-                                                   <input className="form-control " id="EPicture" {...register("EPicture", { required: true })} placeholder=""  value={`${employeeDetails.EPicture}`}/>
+
+                                                   <label htmlFor="EPicture" className="form-label mt-2">Photo Link</label>
+                                                   <input className="form-control " id="EPicture" {...register("EPicture", { required: true })} placeholder=""  value={`${employeeDetails.EPicture}`} readOnly/>
                                                    <label htmlFor="EBasicSalary" className="form-label mt-2">Employee BasicSalary</label>
                                                    <input className="form-control" id="EBasicSalary" {...register("EBasicSalary", { required: true })} placeholder=""  value={`${employeeDetails.EBasicSalary}`}/>
                                                    {errors.EBasicSalary && 
                                                    <p className="text-danger">This field is required</p>
                                                    }
-                                                   <input className="form-control " id="EFastiveBonus" {...register("EFastiveBonus", { required: true })} placeholder="" Value="0"  value={`${employeeDetails.EFastiveBonus}`}/>
-                                                   <input className="form-control " id="EPerformBonus" {...register("EPerformBonus", { required: true })} placeholder="" Value="0"  value={`${employeeDetails.EPerformBonus}`}/> 
+
+                                                   <label htmlFor="EFastiveBonus" className="form-label mt-2">Employee Bonus</label>
+                                                   <input className="form-control " id="EFastiveBonus" {...register("EFastiveBonus", { required: true })} placeholder="" Value="0"  value={`${employeeDetails.EFastiveBonus}`} readOnly/>
+
+                                                   <label htmlFor="EPerformBonus" className="form-label mt-2">Employee  Performance Bonus</label>
+                                                   <input className="form-control " id="EPerformBonus" {...register("EPerformBonus", { required: true })} placeholder="" Value="0"  value={`${employeeDetails.EPerformBonus}`} readOnly/> 
                                                    <label htmlFor="ESchedule" className="form-label mt-2">Employee Schedule</label>
                                                    <input className="form-control" id="ESchedule" {...register("ESchedule", { required: true })} placeholder=""  value={`${employeeDetails.ESchedule}`}/>
                                                    {errors.ESchedule && 
                                                    <p className="text-danger">This field is required</p>
                                                    }
+
+                                                <label htmlFor="EStatus" className="form-label mt-2">Employee Status</label>
+                                                <input className="form-control" id="EStatus" {...register("EStatus", { required: true })} placeholder="" value="Not Paid" readOnly/>
+
                                                    <p className="text-center mt-2">
                                                       <input className="btn btn-success my-2" type="submit" value="Edit Employee"/>
                                                    </p>
@@ -413,19 +423,26 @@ return (
                         {errors.EPhone && 
                         <p className="text-danger">This field is required</p>
                         }
-                        <input className="form-control " id="EPicture" {...register("EPicture", { required: true })} placeholder="" defaultValue=""  />
+                        <label htmlFor="EPicture" className="form-label mt-2">Photo Link</label>
+                        <input className="form-control " id="EPicture" {...register("EPicture", { required: true })} placeholder="" value="NULL"  readOnly/>
                         <label htmlFor="EBasicSalary" className="form-label mt-2">Employee BasicSalary</label>
                         <input className="form-control" id="EBasicSalary" {...register("EBasicSalary", { required: true })} placeholder="" />
                         {errors.EBasicSalary && 
                         <p className="text-danger">This field is required</p>
                         }
-                        <input className="form-control " id="EFastiveBonus" {...register("EFastiveBonus", { required: true })} placeholder="" Value="0"/>
-                        <input className="form-control " id="EPerformBonus" {...register("EPerformBonus", { required: true })} placeholder="" Value="0"/> 
+                         <label htmlFor="EFastiveBonus" className="form-label mt-2">Employee Bonus</label>
+                        <input className="form-control " id="EFastiveBonus" {...register("EFastiveBonus", { required: true })} placeholder="" Value="0" readOnly/>
+                        <label htmlFor="EFastiveBonus" className="form-label mt-2">Employee Performance Bonus</label>
+                        <input className="form-control " id="EPerformBonus" {...register("EPerformBonus", { required: true })} placeholder="" Value="0" readOnly/> 
                         <label htmlFor="ESchedule" className="form-label mt-2">Employee Schedule</label>
                         <input className="form-control" id="ESchedule" {...register("ESchedule", { required: true })} placeholder="" />
                         {errors.ESchedule && 
                         <p className="text-danger">This field is required</p>
                         }
+
+                        <label htmlFor="EStatus" className="form-label mt-2">Employee Status</label>
+                        <input className="form-control" id="EStatus" {...register("EStatus", { required: true })} placeholder="" value="Not Paid" readOnly/>
+
                         <p className="text-center mt-2">
                            <input className="btn btn-success my-2" type="submit" value="Add Employee"/>
                         </p>

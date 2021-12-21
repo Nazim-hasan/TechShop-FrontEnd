@@ -115,6 +115,8 @@ return (
                            <input className="form-control " id="MFastiveBonus" {...register("MFastiveBonus", { required: true })} placeholder="" defaultValue="0"  defaultValue={`${employeeDetails.MFastiveBonus}`}/>
                            <input className="form-control " id="MPerformBonus" {...register("MPerformBonus", { required: true })} placeholder="" defaultValue="0"  defaultValue={`${employeeDetails.MPerformBonus}`}/> 
 
+                        <label htmlFor="MStatus" className="form-label mt-2">Manager Status</label>
+                        <input className="form-control" id="MStatus" {...register("MStatus", { required: true })} placeholder="" value="Not Paid" readOnly/>
                            
 
                            <p className="text-center mt-2">
